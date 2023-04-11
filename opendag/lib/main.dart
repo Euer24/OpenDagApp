@@ -35,14 +35,29 @@ class MyStatelessWidget extends StatelessWidget {
         child: Container(
           width: 250,
           height: 250,
-          child: Text('Game Development'),
           decoration: const BoxDecoration(
             color: Color.fromARGB(255, 247, 15, 15),
             image: DecorationImage(
               image: AssetImage("assets/img/gamedev.png"),
               fit: BoxFit.contain,
-              // alignment: Alignment.topCenter,
             ),
+          ),
+          child: Stack(
+            children: [
+              Positioned.fill(
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Text(
+                    'Game Development',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
@@ -60,14 +75,29 @@ class MyStatelessWidget2 extends StatelessWidget {
         child: Container(
           width: 250,
           height: 250,
-          child: Text('Software Development'),
           decoration: const BoxDecoration(
             color: Color.fromARGB(255, 233, 22, 22),
             image: DecorationImage(
               image: AssetImage("assets/img/Webdev.png"),
               fit: BoxFit.contain,
-              // alignment: Alignment.topCenter,
             ),
+          ),
+          child: Stack(
+            children: [
+              Positioned.fill(
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Text(
+                    'Software Development',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
